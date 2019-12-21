@@ -1,0 +1,16 @@
+.viewer {
+  height: 100vh;
+  width: 100vw;
+
+  display: grid;
+  grid-template-columns: 300px auto;
+  grid-template-rows: 100vh;
+
+  app-sidenav {
+    grid-column: 1 / 2;
+  }
+
+  &.side-nav-minimized {
+    grid-template-columns: 60px auto;
+  }
+}

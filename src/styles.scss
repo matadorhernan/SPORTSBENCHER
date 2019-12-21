@@ -1,1 +1,46 @@
 /* You can add global styles to this file, and also import other style files */
+body,
+html {
+  padding: 0;
+  margin: 0;
+
+  width: 100vw;
+  overflow-x: hidden;
+  input {
+    background: #ebeff5 !important;
+    border-radius: 20px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    border: none !important;
+    &:focus {
+      border-bottom: none !important;
+      box-shadow: none !important;
+    }
+  }
+}
+
+.waves-effect.waves-blue .waves-ripple {
+  /* The alpha value allows the text and background color
+  of the button to still show through. */
+  background-color: #1da1f230;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: none;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #1da1f2;
+}
+
+.btn {
+  text-transform: none;
+}

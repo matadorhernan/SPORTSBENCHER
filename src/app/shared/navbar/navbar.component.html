@@ -1,0 +1,43 @@
+<nav>
+    <div class="left-icons">
+        <i class="circle material-icons waves-effect waves-blue" (click)="toggleSideNav()" [ngClass]="{'rotate-90': isSideNavMinimized}">
+            menu
+        </i>
+
+
+        <i class="circle material-icons waves-effect waves-blue" *ngIf="isAuthenticated">
+            search
+        </i>
+
+
+    </div>
+    <div class="brand-box">
+        <h4>
+            <span>SPORTS</span>BENCHER
+        </h4>
+    </div>
+    <div class="right-icons">
+
+
+        <app-login *ngIf="!isAuthenticated"></app-login>
+        <div class="separator" *ngIf="!isAuthenticated"></div>
+
+        <a class="waves-effect waves-blue btn">
+            <span>En</span>
+            <i class="material-icons right">
+                language
+            </i>
+        </a>
+
+        <div class="separator" *ngIf="isAuthenticated"></div>
+        <a class="waves-effect waves-blue btn" *ngIf="isAuthenticated">
+            <span>Miguel Romero</span>
+            <img src="https://scontent.fagu1-1.fna.fbcdn.net/v/t1.0-9/76959414_194075558297946_5799015330676211712_o.jpg?_nc_cat=102&_nc_ohc=PGFu_Iyw6I4AQlbpWNkWFcTZ_ykCzUTV6twDO9LTP--fwGxJW03Iv84hw&_nc_ht=scontent.fagu1-1.fna&oh=d31a5023679bd75e014928fc356fb548&oe=5E6E2C59"
+                alt="profile picture">
+        </a>
+        <div class="separator" *ngIf="isAuthenticated"></div>
+        <i class="circle material-icons waves-effect waves-dark" *ngIf="isAuthenticated">
+            notifications_none
+        </i>
+    </div>
+</nav>
