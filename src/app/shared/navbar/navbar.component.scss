@@ -13,6 +13,14 @@ nav {
   box-shadow: 0 0 20px 0px #00000033;
   color: #2b2b2b;
 
+  &.navbar-end {
+    justify-content: flex-end;
+    .brand-box {
+      left: 20px;
+      transform: translateX(0);
+    }
+  }
+
   .left-icons {
     display: flex;
     justify-content: center;
@@ -34,9 +42,9 @@ nav {
       font-size: 30px;
       margin: 0;
       padding: 0;
-      
+
       span {
-        color: #1DA1F2;
+        color: #1da1f2;
         font-weight: bold;
       }
     }
@@ -48,7 +56,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
     .separator {
       display: block;
       margin-left: 5px;
@@ -57,7 +65,7 @@ nav {
       width: 1px;
       height: inherit;
     }
-    
+
     .btn {
       color: #2b2b2b;
       height: 40px;
@@ -78,33 +86,122 @@ nav {
         border-radius: 50%;
       }
     }
+
     i.circle {
-      border: none;     
-      background: linear-gradient(90deg, #1df2a0 , #1DA1F2);
+      border: none;
+      background: linear-gradient(90deg, #1df2a0, #1da1f2);
       color: #fff;
     }
   }
 }
 
 i.circle {
-  
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
   height: 30px;
   width: 30px;
-  
+
   border: 1px solid #8a8a8a;
   border-radius: 50%;
   font-size: 20px;
-  
+
   &.rotate-90 {
     transform: rotate(90deg);
   }
 
   &:not(:first-child) {
     margin-left: 10px;
+  }
+}
+
+.dropdown-wrapper {
+  position: relative;
+  width: 165px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+
+  &.language {
+    width: 80px;
+    .dropdown {
+      width: 200px;
+      .icon {
+        height: 20px;
+        width: 40px;
+        margin-right: 0;
+        margin-left: auto;
+      }
+
+      .mex-icon {
+        background: url("/assets/mexico.svg") center / contain no-repeat;
+      }
+      .usa-icon {
+        background: url("/assets/us.svg") center / contain no-repeat;
+      }
+    }
+  }
+
+  &:hover .dropdown {
+    display: block;
+  }
+
+  .dropdown {
+    position: absolute;
+    top: 80px;
+    width: 280px;
+    height: 100%;
+    display: none;
+    &:hover {
+      display: block;
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        background: #ffffff;
+        height: 20px;
+        width: 20px;
+
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+
+      li {
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        color: black;
+
+        background: #ffffff;
+
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        &:first-child {
+          border-top-left-radius: 10px !important;
+          border-top-right-radius: 10px !important;
+          border-bottom: 1px solid #ecf0f6;
+        }
+        &:last-child {
+          border-bottom: none;
+          border-bottom-left-radius: 10px !important;
+          border-bottom-right-radius: 10px !important;
+        }
+
+        i {
+          color: #8f9bb3;
+          margin-right: 10px;
+        }
+      }
+    }
   }
 }

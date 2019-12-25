@@ -41,6 +41,10 @@ html {
   background: #1da1f2;
 }
 
+::placeholder {
+  color: #7a7a7a;
+}
+
 .btn {
   text-transform: none;
 }

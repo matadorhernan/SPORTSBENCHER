@@ -4,7 +4,7 @@ import { TournamentsComponent } from "./tournaments/tournaments.component";
 
 const routes: Routes = [
   {
-    path: "**",
+    path: "",
     component: TournamentsComponent
   }
 ];

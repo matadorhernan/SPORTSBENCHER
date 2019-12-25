@@ -32,4 +32,8 @@ export class NavbarComponent implements OnInit {
   public toggleSideNav() {
     this.navigationService.isSideNavMinimized$.next(!this.isSideNavMinimized);
   }
+
+  public logOutHandler() {
+    this.authenticationService.isAuthenticated$.next(false);
+  }
 }
