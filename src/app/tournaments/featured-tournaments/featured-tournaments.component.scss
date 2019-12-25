@@ -1,0 +1,33 @@
+.featured {
+  border-radius: 10px;
+  overflow: hidden;
+  .row {
+    margin-bottom: 0;
+
+    .col.s12 {
+      padding: 0;
+    }
+
+    .tabs .tab {
+      text-transform: none;
+      border-top: 1px solid #ecf0f6;
+      a {
+        color: #2b2b2b;
+      }
+    }
+
+    .tabs .tab a:focus,
+    .tabs .tab a:focus.active {
+      background: none;
+    }
+  }
+}
+
+.slide {
+  padding: 20px !important;
+  h2 {
+    color: white;
+    margin: 0;
+    padding: 0;
+  }
+}

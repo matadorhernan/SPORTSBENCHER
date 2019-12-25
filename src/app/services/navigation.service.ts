@@ -1,12 +1,18 @@
-import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { Injectable } from "@angular/core";
+import { BehaviorSubject } from "rxjs";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
 export class NavigationService {
+  public isSideNavMinimized$: BehaviorSubject<boolean>;
 
-  public isSideNavMinimized$:BehaviorSubject<boolean> = new BehaviorSubject(false);
-
-  constructor() { }
+  constructor() {
+    this.isSideNavMinimized$ = new BehaviorSubject(
+      localStorage.getItem("00A001") == "true" || false
+    );
+    this.isSideNavMinimized$.subscribe(status => {
+      localStorage.setItem("00A001", status.toString());
+    });
+  }
 }

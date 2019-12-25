@@ -23,7 +23,7 @@
     "gsap": "^3.0.4",
     "hammerjs": "^2.0.8",
     "jquery": "^3.4.1",
-    "material-design-icons": "^3.0.1",
+    "material-design-icons-iconfont": "^5.0.1",
     "materialize-css": "^1.0.0-rc.2",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",

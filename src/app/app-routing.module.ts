@@ -1,12 +1,23 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 import { TournamentsComponent } from "./tournaments/tournaments.component";
+import { TeamsComponent } from "./teams/teams.component";
+import { PlayersComponent } from "./players/players.component";
 
 const routes: Routes = [
   {
-    path: "",
+    path: "tournaments",
     component: TournamentsComponent
-  }
+  },
+  {
+    path: "teams",
+    component: TeamsComponent
+  },
+  {
+    path: "players",
+    component: PlayersComponent
+  },
+  { path: "", redirectTo: "tournaments", pathMatch: "full" }
 ];
 
 @NgModule({

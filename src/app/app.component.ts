@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import { Component } from "@angular/core";
 import { AuthenticationService } from "./services/authentication.service";
 import { NavigationService } from "./services/navigation.service";
 
@@ -7,8 +7,7 @@ import { NavigationService } from "./services/navigation.service";
   templateUrl: "./app.component.html",
   styleUrls: ["./app.component.scss"]
 })
-export class AppComponent{
-
+export class AppComponent {
   public isAuthenticated: boolean = false;
   public isSideNavMinimized: boolean = false;
 
@@ -16,7 +15,6 @@ export class AppComponent{
     private authenticationService: AuthenticationService,
     private navigationService: NavigationService
   ) {
-
     authenticationService.isAuthenticated$.subscribe((observer: boolean) => {
       this.isAuthenticated = observer;
     });
@@ -24,7 +22,5 @@ export class AppComponent{
     navigationService.isSideNavMinimized$.subscribe((observer: boolean) => {
       this.isSideNavMinimized = observer;
     });
-
   }
-
 }

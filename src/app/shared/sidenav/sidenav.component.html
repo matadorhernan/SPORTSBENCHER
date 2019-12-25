@@ -1,22 +1,25 @@
 <nav>
-    <ul>
-        <li class="menu-item waves-effect waves-blue ">
-            <i class="material-icons">
-                format_size
-            </i>
-            <span>Torneos</span>
-        </li>
-        <li class="menu-item waves-effect waves-blue ">
-            <i class="material-icons">
-                people
-                </i>
-            <span>Equipos</span>
-        </li>
-        <li class="menu-item waves-effect waves-blue ">
-            <i class="material-icons">
-                directions_run
-            </i>
-            <span>Jugadores</span>
-        </li>
-    </ul>
+  <ul>
+    <li
+      class="menu-item waves-effect waves-blue "
+      [routerLink]="['/tournaments']"
+    >
+      <i class="material-icons">
+        format_size
+      </i>
+      <span>Tournaments</span>
+    </li>
+    <li class="menu-item waves-effect waves-blue " [routerLink]="['/teams']">
+      <i class="material-icons">
+        people
+      </i>
+      <span>Teams</span>
+    </li>
+    <li class="menu-item waves-effect waves-blue " [routerLink]="['/players']">
+      <i class="material-icons">
+        directions_run
+      </i>
+      <span>Players</span>
+    </li>
+  </ul>
 </nav>

@@ -11,6 +11,10 @@ import { AuthComponent } from './auth/auth.component';
 import { ResetComponent } from './auth/reset/reset.component';
 import { SidenavComponent } from './shared/sidenav/sidenav.component';
 import { TournamentsComponent } from './tournaments/tournaments.component';
+import { FeaturedTournamentsComponent } from './tournaments/featured-tournaments/featured-tournaments.component';
+import { TournamentsTableComponent } from './tournaments/tournaments-table/tournaments-table.component';
+import { TeamsComponent } from './teams/teams.component';
+import { PlayersComponent } from './players/players.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,11 @@ import { TournamentsComponent } from './tournaments/tournaments.component';
     AuthComponent,
     ResetComponent,
     SidenavComponent,
-    TournamentsComponent
+    TournamentsComponent,
+    FeaturedTournamentsComponent,
+    TournamentsTableComponent,
+    TeamsComponent,
+    PlayersComponent
   ],
   imports: [
     BrowserModule,
