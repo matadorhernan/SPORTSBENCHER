@@ -13,9 +13,12 @@
 
   &:hover {
     transform: scale(1.005);
-    box-shadow: 0 0 20px 0 #00000038;
-    margin-top: 2px;
+    box-shadow: 0 0 20px 0 #00000013;
+
     margin-bottom: 12px;
+    &:not(:first) {
+      margin-top: 2px;
+    }
   }
 
   .sport {

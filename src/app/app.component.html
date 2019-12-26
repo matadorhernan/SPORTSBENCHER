@@ -1,11 +1,15 @@
 <app-navbar></app-navbar>
-<div class="viewer" *ngIf="isAuthenticated" [ngClass]="{'side-nav-minimized': isSideNavMinimized}">
+<div
+  class="viewer"
+  *ngIf="isAuthenticated"
+  [ngClass]="{ 'side-nav-minimized': isSideNavMinimized }"
+>
+  <div>
     <app-sidenav></app-sidenav>
-    <div>
-        <router-outlet></router-outlet>
-    </div>
+    <router-outlet></router-outlet>
+  </div>
 </div>
 <div *ngIf="!isAuthenticated">
-    <app-auth></app-auth>
-    <app-footer></app-footer>
+  <app-auth></app-auth>
+  <app-footer></app-footer>
 </div>

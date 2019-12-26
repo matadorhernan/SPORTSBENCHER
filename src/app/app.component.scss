@@ -2,15 +2,4 @@
   height: calc(100vh - 60px);
   width: 100vw;
   margin-top: 60px;
-  display: grid;
-  grid-template-columns: 300px auto;
-  grid-template-rows: 100%;
-
-  app-sidenav {
-    grid-column: 1 / 2;
-  }
-
-  &.side-nav-minimized {
-    grid-template-columns: 60px auto;
-  }
 }

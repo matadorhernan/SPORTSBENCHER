@@ -15,6 +15,12 @@ import { FeaturedTournamentsComponent } from './tournaments/featured-tournaments
 import { TournamentsTableComponent } from './tournaments/tournaments-table/tournaments-table.component';
 import { TeamsComponent } from './teams/teams.component';
 import { PlayersComponent } from './players/players.component';
+import { TournamentsGridComponent } from './tournaments/tournaments-grid/tournaments-grid.component';
+import { FeaturedTeamsComponent } from './teams/featured-teams/featured-teams.component';
+import { TournamentComponent } from './tournaments/tournament/tournament.component';
+import { TeamsGridComponent } from './teams/teams-grid/teams-grid.component';
+import { TeamsTableComponent } from './teams/teams-table/teams-table.component';
+import { TeamComponent } from './teams/team/team.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +36,13 @@ import { PlayersComponent } from './players/players.component';
     FeaturedTournamentsComponent,
     TournamentsTableComponent,
     TeamsComponent,
-    PlayersComponent
+    PlayersComponent,
+    TournamentsGridComponent,
+    FeaturedTeamsComponent,
+    TournamentComponent,
+    TeamsGridComponent,
+    TeamsTableComponent,
+    TeamComponent
   ],
   imports: [
     BrowserModule,

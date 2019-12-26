@@ -1,0 +1,36 @@
+.item-wrap {
+  cursor: pointer;
+  display: grid;
+  grid-template-rows: 100px auto;
+  background: #fff;
+  border-radius: 10px;
+  margin: 5px;
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.005);
+    box-shadow: 0 0 20px 0 #00000013;
+  }
+
+  .sport {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-bottom: 1px solid #ecf0f6;
+    i {
+      font-size: 50px;
+      color: #8f9bb3;
+    }
+  }
+
+  .tournamnt-title {
+    font-size: 16px;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    justify-items: center;
+    align-content: center;
+    text-align: center;
+  }
+}
