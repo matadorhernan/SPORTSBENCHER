@@ -1,3 +1,19 @@
-<div>
-  <p>Featured Teams</p>
+<div class="teams">
+  <div class="featured">
+    <p>Global</p>
+    <app-featured></app-featured>
+  </div>
+  <div class="filter-bar">
+    <p>Your Teams</p>
+    <app-filter-bar></app-filter-bar>
+  </div>
+  <div class="grid-viewer" #grid *ngIf="!isRowViewActivated">
+    <app-grid-item
+      [width]="grid.offsetWidth / 6 - 10"
+      [routerLink]="['/tournaments', 1]"
+    ></app-grid-item>
+  </div>
+  <div class="row-viewer" *ngIf="isRowViewActivated">
+    <app-list-item [routerLink]="['/tournaments', 1]"></app-list-item>
+  </div>
 </div>

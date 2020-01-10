@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/softtekSports",
+            "outputPath": "dist/sportsbencher",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -110,16 +110,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "softtekSports:serve"
+            "devServerTarget": "sportsbencher:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "softtekSports:serve:production"
+              "devServerTarget": "sportsbencher:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "softtekSports"
+  "defaultProject": "sortsBencher"
 }

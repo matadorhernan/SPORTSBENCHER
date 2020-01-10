@@ -1,58 +1,19 @@
 <div class="tournaments">
-  <p>Featured Tournaments</p>
-  <app-featured-tournaments></app-featured-tournaments>
-
-  <div class="filters">
-    <p>Filter</p>
-    <p>Search Bar</p>
-    <p>View</p>
-    <p>Create</p>
-    <div class="left-items">
-      <div class="dropdown-wrapper">
-        <a href="" class="sports">
-          <span>Any sport</span>
-          <i class="material-icons">keyboard_arrow_down</i>
-        </a>
-      </div>
-    </div>
-    <div class="search-bar">
-      <div class="separator"></div>
-      <input type="text" placeholder="Search tiltle" />
-      <i class="material-icons">search</i>
-      <div class="separator"></div>
-    </div>
-    <div class="right-items">
-      <i
-        class="material-icons"
-        [ngClass]="{ active: isGridView }"
-        [ngStyle]="isGridView && { cursor: 'default' }"
-        (click)="toggleItems(true)"
-        >grid_view</i
-      >
-      <i
-        class="material-icons"
-        [ngClass]="{ active: isRowView }"
-        [ngStyle]="isRowView && { cursor: 'default' }"
-        (click)="toggleItems(false)"
-        >view_agenda</i
-      >
-    </div>
-
-    <div class="create">
-      <i class="material-icons">add_circle_outline</i>
-    </div>
+  <div class="featured">
+    <p>Global</p>
+    <app-featured></app-featured>
   </div>
-
-  <p>Your Tournaments</p>
-  <div class="grid-viewer" #grid *ngIf="isGridView">
-    <app-tournaments-grid
+  <div class="filter-bar">
+    <p>Your Tournaments</p>
+    <app-filter-bar></app-filter-bar>
+  </div>
+  <div class="grid-viewer" #grid *ngIf="!isRowViewActivated">
+    <app-grid-item
       [width]="grid.offsetWidth / 6 - 10"
       [routerLink]="['/tournaments', 1]"
-    ></app-tournaments-grid>
+    ></app-grid-item>
   </div>
-  <div class="row-viewer" *ngIf="isRowView">
-    <app-tournaments-table
-      [routerLink]="['/tournaments', 1]"
-    ></app-tournaments-table>
+  <div class="row-viewer" *ngIf="isRowViewActivated">
+    <app-list-item [routerLink]="['/tournaments', 1]"></app-list-item>
   </div>
 </div>

@@ -10,7 +10,7 @@
     <i class="circle material-icons waves-effect waves-blue"> search </i>
   </div>
   <div class="brand-box">
-    <h4><span>SPORTS</span>BENCHER</h4>
+    <h4>sportsbencher</h4>
   </div>
   <div class="right-icons">
     <div class="dropdown-wrapper language">
@@ -54,11 +54,86 @@
       </div>
     </div>
     <div class="separator" *ngIf="isAuthenticated"></div>
-    <i
-      class="circle material-icons waves-effect waves-dark"
-      *ngIf="isAuthenticated"
-    >
-      notifications_none
-    </i>
+    <div class="dropdown-wrapper notifications">
+      <a class="waves-effect waves-blue btn profile">
+        <i
+          class="circle material-icons waves-effect waves-dark"
+          *ngIf="isAuthenticated"
+        >
+          notifications_none
+        </i>
+      </a>
+      <div class="dropdown">
+        <ul>
+          <h2>
+            Notifications
+          </h2>
+          <div class="scroller">
+            <app-notification-item
+              [icon]="'sports_soccer'"
+              [type]="'basic'"
+              [title]="'Notification Item'"
+              [description]="
+                'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint harum
+      facilis laborum porro quibusdam'
+              "
+            ></app-notification-item>
+            <app-notification-item
+              [icon]="'sports_kabaddi'"
+              [type]="'primary'"
+              [title]="'Notification Item'"
+              [description]="
+                'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint harum
+      facilis laborum porro quibusdam'
+              "
+            ></app-notification-item>
+            <app-notification-item
+              [icon]="'wifi'"
+              [type]="'success'"
+              [title]="'Notification Item'"
+              [description]="
+                'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint harum
+      facilis laborum porro quibusdam'
+              "
+              [date]="dateMockUp"
+            ></app-notification-item>
+            <app-notification-item
+              [icon]="'info'"
+              [type]="'info'"
+              [title]="'Notification Item'"
+              [description]="
+                'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint harum
+      facilis laborum porro quibusdam'
+              "
+              [date]="dateMockUp"
+            ></app-notification-item>
+            <app-notification-item
+              [icon]="'warning'"
+              [type]="'warning'"
+              [title]="'Notification Item'"
+              [description]="
+                'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint harum
+      facilis laborum porro quibusdam'
+              "
+              [date]="dateMockUp"
+            ></app-notification-item>
+            <app-notification-item
+              [icon]="'power'"
+              [type]="'danger'"
+              [title]="'Notification Item'"
+              [description]="
+                'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint harum
+      facilis laborum porro quibusdam'
+              "
+              [date]="dateMockUp"
+            ></app-notification-item>
+          </div>
+
+          <label>
+            clear all
+          </label>
+        </ul>
+      </div>
+    </div>
   </div>
 </nav>

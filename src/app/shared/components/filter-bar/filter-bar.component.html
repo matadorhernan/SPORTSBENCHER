@@ -1,0 +1,40 @@
+<div class="filters">
+  <p>Filter</p>
+  <p>Search Bar</p>
+  <p>View</p>
+  <p>Create</p>
+  <div class="left-items">
+    <div class="dropdown-wrapper">
+      <a href="" class="sports">
+        <span>Any</span>
+        <i class="material-icons">keyboard_arrow_down</i>
+      </a>
+    </div>
+  </div>
+  <div class="search-bar">
+    <div class="separator"></div>
+    <input type="text" placeholder="Search " />
+    <i class="material-icons">search</i>
+    <div class="separator"></div>
+  </div>
+  <div class="right-items">
+    <i
+      class="material-icons"
+      [ngClass]="{ active: !isRowViewActivated }"
+      [ngStyle]="!isRowViewActivated && { cursor: 'default' }"
+      (click)="toggleItems(true)"
+      >grid_view</i
+    >
+    <i
+      class="material-icons"
+      [ngClass]="{ active: isRowViewActivated }"
+      [ngStyle]="isRowViewActivated && { cursor: 'default' }"
+      (click)="toggleItems(false)"
+      isRowViewActivated
+      >view_agenda</i
+    >
+  </div>
+  <div class="create">
+    <i class="material-icons">add_circle_outline</i>
+  </div>
+</div>

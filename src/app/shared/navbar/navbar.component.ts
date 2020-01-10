@@ -8,6 +8,7 @@ import { NavigationService } from "../../services/navigation.service";
   styleUrls: ["./navbar.component.scss"]
 })
 export class NavbarComponent implements OnInit {
+  public dateMockUp = Date.now();
   public isAuthenticated: boolean = false;
   public isSideNavMinimized: boolean = false;
 

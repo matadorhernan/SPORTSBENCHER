@@ -7,6 +7,7 @@ nav {
 
   ul {
     padding-top: 60px;
+    position: relative;
     .menu-item {
       display: flex;
       align-items: center;
@@ -21,6 +22,15 @@ nav {
         margin-right: 15px;
         color: #8f9bb3;
       }
+    }
+
+    .indicator {
+      position: absolute;
+      top: 60px;
+      background: #2af2a8;
+      width: 5px;
+      height: 50px;
+      transition: 0.3s ease-in-out;
     }
   }
 }

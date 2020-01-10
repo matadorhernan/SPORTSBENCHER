@@ -4,8 +4,8 @@
   *ngIf="isAuthenticated"
   [ngClass]="{ 'side-nav-minimized': isSideNavMinimized }"
 >
+  <app-sidenav></app-sidenav>
   <div>
-    <app-sidenav></app-sidenav>
     <router-outlet></router-outlet>
   </div>
 </div>

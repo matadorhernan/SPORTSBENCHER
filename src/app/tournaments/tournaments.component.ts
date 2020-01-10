@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { NavigationService } from "../services/navigation.service";
 
 @Component({
   selector: "app-tournaments",
@@ -6,20 +7,12 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./tournaments.component.scss"]
 })
 export class TournamentsComponent implements OnInit {
-  constructor() {}
+  public isRowViewActivated = true;
 
-  public isRowView = true;
-  public isGridView = false;
-
-  ngOnInit() {}
-
-  public toggleItems(operation: boolean) {
-    if (!this.isRowView && !operation) {
-      this.isRowView = true;
-      this.isGridView = false;
-    } else {
-      this.isRowView = false;
-      this.isGridView = true;
-    }
+  constructor(private navigationService: NavigationService) {}
+  ngOnInit() {
+    this.navigationService.isRowViewActivated$.subscribe(status => {
+      this.isRowViewActivated = status;
+    });
   }
 }

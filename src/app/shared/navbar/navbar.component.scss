@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Fredoka+One&display=swap");
 
 nav {
   z-index: 1999;
@@ -37,16 +37,12 @@ nav {
     transform: translateX(-50%);
 
     h4 {
-      font-family: "Raleway", sans-serif;
-      font-weight: normal;
+      font-family: "Fredoka One", cursive;
+      font-weight: 400;
+      color: #a4a4a4;
       font-size: 30px;
       margin: 0;
       padding: 0;
-
-      span {
-        color: #1da1f2;
-        font-weight: bold;
-      }
     }
   }
 
@@ -136,6 +132,42 @@ i.circle {
     }
   }
 
+  &.notifications {
+    width: 60px;
+    .dropdown {
+      width: 350px;
+      right: 0;
+      ul {
+        box-shadow: 0 10px 20px 1px #00000013;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        background: #fff;
+        border-radius: 10px;
+        line-height: 16px;
+        h2 {
+          font-size: 16px;
+          margin: 0;
+          padding: 10px;
+        }
+        .scroller {
+          max-height: 60vh;
+          padding: 10px;
+          overflow-y: scroll;
+          border-top: 1px solid #dfe3eb;
+          border-bottom: 1px solid #dfe3eb;
+        }
+        &::before {
+          left: 91%;
+        }
+        label {
+          padding: 10px;
+        }
+      }
+    }
+  }
+
   &:hover .dropdown {
     display: block;
   }
@@ -176,11 +208,11 @@ i.circle {
         display: flex;
         justify-content: flex-start;
         align-items: center;
+        border-bottom: 1px solid #ecf0f6;
 
         &:first-child {
           border-top-left-radius: 10px !important;
           border-top-right-radius: 10px !important;
-          border-bottom: 1px solid #ecf0f6;
         }
         &:last-child {
           border-bottom: none;
